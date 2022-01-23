@@ -1,0 +1,39 @@
+{
+    "name": "convertmarkdowntohtml",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "typecheck": "tsc --p .",
+        "clean": "rimraf dist",
+        "compile": "cross-env-shell babel src -d dist --source-maps --extensions '.ts'",
+        "start": "npm run clean && npm run compile && node ./dist/index.js",
+        "start-typecheck": "npm run typecheck && npm run start",
+        "grunt": "grunt --gruntfile Gruntfile.cjs"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/cli": "^7.14.8",
+        "@babel/core": "^7.14.8",
+        "@babel/preset-env": "^7.14.9",
+        "@babel/preset-typescript": "^7.14.5",
+        "cross-env": "^7.0.3",
+        "fs-extra": "^10.0.0",
+        "github-markdown-css": "^5.1.0",
+        "highlight.js": "^11.2.0",
+        "markdown-it": "^12.2.0",
+        "rimraf": "^3.0.2"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^9.0.12",
+        "@types/markdown-it": "^12.0.3",
+        "@types/node": "^16.4.10",
+        "grunt": "^1.4.1",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-run": "^0.8.1",
+        "typescript": "^4.3.5"
+    }
+}
