@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./../../github-markdown.css">
+    <link rel="stylesheet" href="./../../zenburn.css">
+    <style>
+	    .markdown-body {
+	    	box-sizing: border-box;
+	    	min-width: 200px;
+	    	max-width: 980px;
+	    	margin: 0 auto;
+	    	padding: 45px;
+	    }
+    
+	    @media (max-width: 767px) {
+	    	.markdown-body {
+	    		padding: 15px;
+	    	}
+	    }
+    </style>
+  </head>
+  <body style='margin: 0 auto; background-color: black;'>
+    <article class="markdown-body">
+      <h1>FloorBloodSplat</h1>
+<h4>Notes:</h4>
+<ul>
+<li>It takes 72 in-game hours for bloodsplats to fade.</li>
+</ul>
+<br>
+<h1>World Versions</h1>
+<h2>64-</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">The x coordinate. (In World-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">y</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">The y coordinate. (In World-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">z</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">The z coordinate. (In World-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">The type of the bloodsplat.</td>
+</tr>
+</tbody>
+</table>
+<h4>Notes:</h4>
+<ul>
+<li>The x &amp; y coordinates are stored as World-Space.</li>
+<li>The z coordinate is stored as 0-8 in World-Space.</li>
+<li>The newer field 'world_age' is set to the world's age (in hours), when loaded in version 73+.</li>
+</ul>
+<br>
+<h2>65 - 72</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">The x coordinate. (In GridSquare-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">y</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">The y coordinate. (In GridSquare-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">z</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">The z coordinate. (In GridSquare-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">The type of the bloodsplat.</td>
+</tr>
+<tr>
+<td style="text-align:left">world_age</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">The age value of the bloodsplat.</td>
+</tr>
+</tbody>
+</table>
+<h4>Notes:</h4>
+<ul>
+<li>The x &amp; y coordinates range from 0-255. (Scaled to 0-10 units in GridSquare-Space)</li>
+<li>The z coordinate ranges from 0-255. (Scaled to 0-8 units in World-Space)</li>
+</ul>
+<br>
+<h2>73+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">The x coordinate. (In GridSquare-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">y</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">The y coordinate. (In GridSquare-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">z</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">The z coordinate. (In GridSquare-Space)</td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">The type of the bloodsplat.</td>
+</tr>
+<tr>
+<td style="text-align:left">world_age</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">The age value of the bloodsplat.</td>
+</tr>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h4>Notes:</h4>
+<ul>
+<li>The x &amp; y coordinates range from 0-255. (Scaled to 0-10 in GridSquare-Space)</li>
+<li>The z coordinate ranges from 0-255. (Scaled to 0-8 in World Space)</li>
+</ul>
+
+    </article>
+  </body>
+</html>

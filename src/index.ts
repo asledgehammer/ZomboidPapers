@@ -62,8 +62,8 @@ const compile = async function (path: string) {
     );
 
     await compile('index');
-    await compile('map');
-    await compile('map/blood_splat');
+    await compile('map/map');
+    await compile('map/objects/floor_blood_splat');
 
     console.log('HTML generated.');
 })();

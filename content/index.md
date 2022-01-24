@@ -1,3 +1,3 @@
 # Zomboid Papers
 
--   ### [Map](map.html)
+-   ### [Map](map/map.html)
