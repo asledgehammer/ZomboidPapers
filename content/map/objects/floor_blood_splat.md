@@ -1,9 +1,5 @@
 # FloorBloodSplat
 
-#### Notes:
-
--   It takes 72 in-game hours for bloodsplats to fade.
-
 <br>
 
 # World Versions
