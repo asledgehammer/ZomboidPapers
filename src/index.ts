@@ -1,21 +1,32 @@
 import fs from 'fs-extra';
+import { stringify } from 'querystring';
 import { markdown } from './utils/markdown.js';
 
-(async function () {
-    console.log('Converting Markdown to HTML...');
+const compile = async function (path: string) {
+    let prepend = './';
+    if (path.includes('/')) {
+        const lastIndex = path.lastIndexOf('/');
+        const pathBeforeFile = path.substring(0, lastIndex) + '/';
 
-    // markdown source
-    const content = await fs.readFile('./content/map.md', 'utf8');
+        prepend += '../'.repeat(path.split('/').length - 1);
 
-    // converted to HTML
+        await fs.mkdirs(`./docs/${pathBeforeFile}`);
+    } else {
+        await fs.mkdirs('./docs');
+    }
+
+    await fs.mkdirs('./docs');
+
+    console.log(`Compiling ./content/${path}.md ..`);
+    const content = await fs.readFile(`./content/${path}.md`, 'utf8');
     const rendered = await markdown.render(content);
 
     const htmlFile = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="github-markdown.css">
-    <link rel="stylesheet" href="zenburn.css">
+    <link rel="stylesheet" href="${prepend}github-markdown.css">
+    <link rel="stylesheet" href="${prepend}zenburn.css">
     <style>
 	    .markdown-body {
 	    	box-sizing: border-box;
@@ -39,15 +50,19 @@ import { markdown } from './utils/markdown.js';
   </body>
 </html>`;
 
+    await fs.writeFile(`./docs/${path}.html`, htmlFile, 'utf8');
+};
+
+(async function () {
     await fs.mkdirs('./docs');
-
-    await fs.writeFile('./docs/map.html', htmlFile, 'utf8');
-
     await fs.copy(
         './node_modules/highlight.js/styles/default.css',
         './docs/default.css',
         { overwrite: true }
     );
+
+    await compile('map');
+    await compile('map/blood_splat');
 
     console.log('HTML generated.');
 })();

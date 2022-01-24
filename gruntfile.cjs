@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     // Simple config to run jshint any time a file is added, changed or deleted
     grunt.initConfig({
         watch: {
-            files: ['content/*'],
+            files: ['content/**'],
             tasks: ['run:npm_run_start'],
         },
         run: {
