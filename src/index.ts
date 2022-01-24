@@ -61,6 +61,7 @@ const compile = async function (path: string) {
         { overwrite: true }
     );
 
+    await compile('index');
     await compile('map');
     await compile('map/blood_splat');
 
