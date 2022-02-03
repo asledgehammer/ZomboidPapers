@@ -1,5 +1,9 @@
 # FloorBloodSplat
 
+#### Notes:
+
+-   If **world_age** is lower than a blood splat, the blood splat's age is set as the **world_age**.
+
 <br>
 
 # World Versions
@@ -40,14 +44,14 @@
 
 ## 73+
 
-| Field     | Type  | Description                             |
-| :-------- | :---- | :-------------------------------------- |
-| x         | byte  | The x coordinate. (In GridSquare-Space) |
-| y         | byte  | The y coordinate. (In GridSquare-Space) |
-| z         | byte  | The z coordinate. (In GridSquare-Space) |
-| type      | byte  | The type of the bloodsplat.             |
-| world_age | float | The age value of the bloodsplat.        |
-| index     | byte  |                                         |
+| Field     | Type    | Description                                                     |
+| :-------- | :------ | :-------------------------------------------------------------- |
+| x         | byte    | The x coordinate. (In GridSquare-Space)                         |
+| y         | byte    | The y coordinate. (In GridSquare-Space)                         |
+| z         | byte    | The z coordinate. (In GridSquare-Space)                         |
+| type      | byte    | The type of the bloodsplat.                                     |
+| world_age | float   | The age value of the bloodsplat.                                |
+| index     | integer | The offset index of the blood splat in the chunk containing it. |
 
 #### Notes:
 

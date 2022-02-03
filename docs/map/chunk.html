@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./../github-markdown.css">
+    <link rel="stylesheet" href="./../zenburn.css">
+    <style>
+	    .markdown-body {
+	    	box-sizing: border-box;
+	    	min-width: 200px;
+	    	max-width: 980px;
+	    	margin: 0 auto;
+	    	padding: 45px;
+	    }
+    
+	    @media (max-width: 767px) {
+	    	.markdown-body {
+	    		padding: 15px;
+	    	}
+	    }
+    </style>
+  </head>
+  <body style='margin: 0 auto; background-color: black;'>
+    <article class="markdown-body">
+      <h1>Chunk</h1>
+<h4>Notes:</h4>
+<ul>
+<li>The latest <strong>world_version</strong> as of Build 41.65 is <strong>186</strong>.</li>
+<li>Chunks store 10x10x8 GridSquares. (800 GridSquares)</li>
+</ul>
+<br>
+<h1>World Versions</h1>
+<h2>Version 186</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">debug</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">If true, debug logging will occur.</td>
+</tr>
+<tr>
+<td style="text-align:left">world_version</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">The world version that the chunk is stored.</td>
+</tr>
+<tr>
+<td style="text-align:left">chunk_length_bytes</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">The amount of bytes stored in the chunk file.</td>
+</tr>
+<tr>
+<td style="text-align:left">crc_value</td>
+<td style="text-align:left">long</td>
+<td style="text-align:left">The CRC value of the chunk file, compared with the CRC value of the chunk loaded.</td>
+</tr>
+<tr>
+<td style="text-align:left">---</td>
+<td style="text-align:left">---</td>
+<td style="text-align:left">---</td>
+</tr>
+<tr>
+<td style="text-align:left">floor_blood_splat_count</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">The count of floor_blood_splat objects stored in the chunk</td>
+</tr>
+<tr>
+<td style="text-align:left">floor_blood_splats</td>
+<td style="text-align:left"><a href="objects/floor_blood_splat.html">FloorBloodSplat[]</a></td>
+<td style="text-align:left">The array of FloorBloodSplats in the chunk.</td>
+</tr>
+</tbody>
+</table>
+
+    </article>
+  </body>
+</html>
